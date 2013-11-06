@@ -1,4 +1,4 @@
-(function(){
+(function(w){
 
     "use strict";
 
@@ -147,8 +147,8 @@
      * @execute : Set global variable
      * @variable wac_story {object}, wac_victory {object}, wac_intro {object}
      */
-    window.wac_story = component;
-    window.wac_victory = victory;
-    window.wac_intro = intro;
+    w.wac_story = component;
+    w.wac_victory = victory;
+    w.wac_intro = intro;
 
 }).call(this, window);
