@@ -1,9 +1,15 @@
+@font-face {
+    font-family: 'trade gothic';
+    src: url('f51d24dd-8256-43c6-ba1a-6aeae9d3f262.woff');
+}
+
 #main{
 	border:10px solid #75c8db;
 }
 #main h1{
     margin:5px 0;
     font-size: 40px;
+    font-family: 'trade gothic';
 }
 #item_left_panel button {
     margin-bottom: 5px;
@@ -31,7 +37,7 @@
     border:10px solid #75c8db;
     min-height: 400px;
 }
-.btn {
+#left_panel .btn {
     height: 40px;
     max-width: 200px;
     z-index: 300;

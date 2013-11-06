@@ -4,8 +4,9 @@
 <title>Codeac</title>
 <link rel="stylesheet" type="text/css" href="/editr/editr.css">
 <link rel="stylesheet" type="text/css" href="/editr/bootstrap.min.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="/css/introjs.min.css">
 <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 </head>
 <body>
 <?php
@@ -71,6 +72,8 @@ die;*/
 <script src="//cdn.jsdelivr.net/ace/1.1.01/min/ext-emmet.js"></script>
 <script src="/editr/libs/ext.emmet.js"></script>
 <script src="/editr/editr.js"></script>
+<script src="/js/intro.min.js"></script>
+<script src="/js/story.js"></script>
 <script src="/js/game.js"></script>
 </body>
 </html>
