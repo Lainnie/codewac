@@ -6,7 +6,6 @@
         $ = jQuery,
         editr,
         object,
-        currentLVL = 0,
         intro = window.wac_intro,
         story = window.wac_story,
         victory = window.wac_victory,
@@ -44,12 +43,15 @@
          */
         initGame = function(gamelvl){
 
+            $('#item_left_panel div.btn').remove();
+            $('#main_panel div').remove();
             for (object in gamelvl){
                 if (gamelvl.hasOwnProperty(object)){
                     gamelvl[object].generateButton();
                 }
             }
         },
+
         /**
          * @function insertEditor : Push html in editor.js
          * @param html {string} : Balise html
@@ -64,7 +66,9 @@
          * @return {void}
          */
         cleanEditor = function(){
-            editr.getFiles().html[0].editor.removeLines();
+            if (editr.getFiles().html[0].editor !== undefined){
+                editr.getFiles().html[0].editor.removeLines();
+            }
         },
 
         /**
@@ -114,6 +118,7 @@
             intro.setOptions(option);
             intro.start();
         },
+
         /**
          * @function init : Initialize Drag, Game, Intro
          * @param index {int} : Index for all game component
@@ -123,6 +128,7 @@
             currentStory = story[index];
             currentVictory = victory[index];
 
+            cleanEditor();
             initGame(currentStory);
             initDrag();
             initIntro(currentIntro);
@@ -145,6 +151,7 @@
             currentVictory[wrap.victory_index].gameobject = ui.draggable[0].id;
 
             console.log(checkWin(currentVictory, currentStory));
+
             $(this).html('');
             $(this).width($(ui.draggable).width() + 25);
             clone.appendTo( this );
